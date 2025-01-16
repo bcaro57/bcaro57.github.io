@@ -1,3 +1,9 @@
+This is my personal portfolio, where I can highlight and go in depth about all of the projects that I've worked on.
+
+Below is information about the template that I used, courtesy of HTML5 UP.
+
+
+
 Phantom by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
