@@ -5,135 +5,257 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Ben Caro's Portfolio - Senior Design Project</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+<head>
+	<title>Ben Caro's Portfolio - Senior Design Project</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
 
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="icon solid style1 fa-arrow-left" style="margin-right: 10px"></span><span class="title">Back to home</span>
-								</a>
+<body class="is-preload">
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
 
-						</div>
-					</header>
+				<!-- Logo -->
+				<a href="index.html" class="logo">
+					<span class="icon solid style1 fa-arrow-left" style="margin-right: 10px"></span><span
+						class="title">Back to home</span>
+				</a>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="files/Ben Caro Resume.pdf" target="_blank">Résumé</a></li>
-						</ul>
-					</nav>
+				<!-- Nav -->
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<h1>RIVULET - Senior Design / Extended Research Project</h1>
-							<span class="image main"><img src="images/rivulet_image.JPG" alt="" /></span>
-							<p>Above is a picture of the most recent edition of the RIVULET, which stands for "Rover for Irrigation and 
-								Vegitation Understanding, Learning, and Environmental Tracking; additionally, the word 'rivulet' is also defined as "a very small stream". 
-								This robot, originially devised as a senior design project at UD, is intended to be used by farmers/researchers 
-								(specifically Dr. Yin Bao, the sponsor of this project) to monitor soil moisture and keep track of plant phenotype.
-								Compared to a field drone, which in some cases are used to achieve similar results, this robot achieves locomotion 
-								by riding along the long trusses of a linear move irrigation system, which connect different sections together.
-								Some advantages of this method are a longer battery life, the ability to collect higher precision measurements, and 
-								elimintaing downwash that drones create from their propellers spinning over crops in the field, which can make image 
-								collection impossible due to the crops moving. 
-							</p>
+			</div>
+		</header>
 
-							<p>The main challenge of developing this robot was avoiding the "truss pockets" - these are the joints that connect multiple
-								truss rods together. My senior design team and I developed a method of traversing past these by having multiple drive wheels
-								connected to independent arms, and when a truss pocket is approached, the arm that's movement is impacted by the truss pocket
-								will lift the wheel out of the way, and the robot is free to continue moving forward. It continues this sequence until the 
-								pocket has been avoided by each wheel, and then it continues with normal operation. My personal contribution has been helping
-								with manufacturing and design tweaks for mechanical components, researching, and ordering, and assembling the electronics, and 
-								programming the robot to perform its actions.
-							</p>
+		<!-- Menu -->
+		<nav id="menu">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="files/Ben Caro Resume.pdf" target="_blank">Résumé</a></li>
+			</ul>
+		</nav>
 
-							<p><span class="image left"><img src="images/cad rivulet v1.jpg" alt="" /></span>The original version has three arms, each independently 
-								controlled with a linear actuator and their own drive wheel. Each motor (6 total) has their own motor driver, which we chose the 
-								BTS7960. Additionally (not pictured), we use a counterweight that will shift the CoG depending on which arm lifts up, which is belt driven by a 
-								stepper motor with a TB6600 driver, and a limit switch to home the load. Finally, all of the control is driven using an Adafruit Feather
-								with a built in LoRa module built in. To communicate between the robot and the controller, we created a custom controller that also uses an Adafruit
-								Feather, which has a similar look to a classic Nintendo controller.							 
-							</p>
-						</div>
-						
-					</div>
-					
-				<!-- Final Back Button -->
-				 <header id="header">
-					<div class="inner">
-						<a href="index.html" class="logo">
-							<span class="icon solid style1 fa-arrow-left" style="margin-right: 10px"></span><span class="title">Back to
-								home</span>
-						</a>
-					</div>
-				</header>
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<h1>RIVULET - Senior Design / Extended Research Project</h1>
+				<span class="image main"><img src="images/rivulet_image.JPG" alt="" /></span>
+				<p>Above is a picture of the most recent edition of the RIVULET, which stands for "Rover for Irrigation
+					and
+					Vegetation Understanding, Learning, and Environmental Tracking; additionally, the word 'rivulet' is
+					also defined as "a very small stream".
+					This robot, originally devised as a senior design project at UD, is intended to be used by
+					farmers/researchers
+					(specifically Dr. Yin Bao, the sponsor of this project) to monitor soil moisture and keep track of
+					plant phenotype.
+					Compared to a field drone, which in some cases are used to achieve similar results, this robot
+					achieves locomotion
+					by riding along the long trusses of a linear move irrigation system, which connect different
+					sections together.
+					Some advantages of this method are a longer battery life, the ability to collect higher precision
+					measurements, and
+					eliminating downwash that drones create from their propellers spinning over crops in the field,
+					which can make image
+					collection impossible due to the crops moving.
+				</p>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h1>Get in touch!</h1>
-					
-								<div style="display: flex; align-items: center; margin-bottom: 20px; width: 100%;">
-									<a href="tel:+14439877745" class="icon solid style2 fa-phone" style="margin-right: 20px;"><span
-											class="label">Phone</span></a>
-									<h4 style="margin: 0;">(443) 987-7745</h4>
-								</div>
-					
-								<div style="display: flex; align-items: center; margin-bottom: 20px; width: 100%;">
-									<a href="mailto:bencaro@udel.edu" class="icon solid style2 fa-envelope"
-										style="margin-right: 20px;"><span class="label">Email</span></a>
-									<h4 style="margin: 0;">bencaro@udel.edu</h4>
-								</div>
-					
-								<p>Currently in Bel Air, Maryland. Open to relocation along the east coast.</p>
-					
-					
-							</section>
-							<section>
-								<h1>Find me!</h1>
-								<ul class="icons">
-									<li><a href="https://github.com/bcaro57" target="_blank" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="https://www.linkedin.com/in/ben-caro/" target="_blank" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li>
-								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+				<p>The main challenge of developing this robot was avoiding the "truss pockets" - these are the joints
+					that connect multiple
+					truss rods together. My senior design team and I developed a method of traversing past these by
+					having multiple drive wheels
+					connected to independent arms, and when a truss pocket is approached, the arm that's movement is
+					impacted by the truss pocket
+					will lift the wheel out of the way, and the robot is free to continue moving forward. It continues
+					this sequence until the
+					pocket has been avoided by each wheel, and then it continues with normal operation. My personal
+					contribution has been helping
+					with manufacturing and design tweaks for mechanical components, researching, and ordering, and
+					assembling the electronics, and
+					programming the robot to perform its actions.
+				</p>
+
+				<div style="display: flex; justify-content: center; align-items: center; height: 15vh;">
+					<h1>RIVULET V1</h1>
+				</div>
+
+				<p>
+					<span class="image left"><img src="images/cad rivulet v1.jpg" alt="" /></span>
+					The original version has three arms, each independently
+					controlled with a linear actuator and their own drive wheel. Each motor (6 total) has their own
+					motor driver, which we chose the
+					BTS7960. Additionally, we use a counterweight that will shift the CoG depending on which arm lifts
+					up, which is belt driven by a
+					stepper motor with a TB6600 driver, and a limit switch to home the load. 2 4S lithium ion batteries
+					power the system, each with an independent
+					capacity of 8 Ah; these were connected in parallel to allow for longer run time. Finally, all of the
+					control is driven using an Adafruit Feather
+					with a built in LoRa module built in. To communicate between the robot and the controller, we
+					created a custom controller that also uses an
+					Adafruit Feather, which has a similar look to a classic Nintendo controller.
+					<span class="image right"><img src="images/controller.jpg" alt="" /></span>
+				</p>
+
+				<p>
+					My role as the electronics and programming team member was to test each component for functionality,
+					install them onto our robot, and
+					create a custom communication protocol between the robot and controller using different bytes in the
+					signal to represent information. Through this,
+					I expanded upon my proficiency in C++ by learning how to do class-based object oriented coding. That
+					code can be found
+					<a href="https://github.com/bcaro57/SeniorDesignBot" target="_blank">here</a> on my GitHub page.
+					Essentially, I created objects for each component
+					(i.e. the drive motor, the actuator, the active balancing, etc.) and separated them into their own
+					"controller" objects, which take in the different
+					components with the understanding of their placement. Therefore, it was easier to maintain the same
+					control between different arms even if something
+					changed on the lower level control. Using the RH_RF95 library, I created a data buffer that had
+					three bytes of data, which encode data relating to the direction, speed, and
+					location which arm should move.
+				</p>
+
+				<p>
+					Early on, I messed around with the communication in different ways. Because keeping serial prints
+					would introduce a lot of unnecessary lag into the system,
+					I tested the communication method between the two using push buttons on a controller and LEDs on a
+					receiver.
+				<div style="display: flex; justify-content: center; align-items: center; height: 55vh;">
+					<video height="450" controls style="border-radius: 5px" autoplay muted>
+						<source src="images/rivulet-led-example.mp4">
+					</video>
+				</div>
+				</p>
+
+				<p>
+					After bug fixing the issues from the communication, I landed on a successful method. Next, we tested
+					that same communication scheme with the motors, and
+					we added a third button to drive all three motors simultaneously. With this, we confirmed that we
+					can implement independent control, which will be handy for moving
+					the arms, as well as simultaneous control for the drive wheels.
+				<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+					<video height="350" controls style="border-radius: 5px" autoplay muted>
+						<source src="images/rivulet-motor-example.mp4">
+					</video>
+				</div>
+				</p>
+
+				<p>
+					Now that the proof of concept had been tested out, I was able to move into making the electronics
+					more tidy and concise, with mounts to fit them into the frame of our robot.
+					At this time, I also helped the other members of my team by laser cutting the arms and any other
+					spacers out that we needed in the UD FabLab.
+				<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+					<span class="image center"><img src="images/rivulet-driver-board.JPG" height="350" alt="" /></span>
+				</div>
+				</p>
+
+				<p>
+					Eventually, we ordered all of our parts from SendCutSend and were able to assemble the frame and all
+					of the electronics. With some final testing and adding the dynamic balancer, I
+					was able to create an initial setup routine and specialized moves for each arm to raise and lower,
+					while placing the balance weight accordingly. The video below shows this process at 2.5x speed.
+				<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+					<video height="350" controls style="border-radius: 5px" autoplay muted>
+						<source src="images/rivulet-full-bench-test.mp4">
+					</video>
+				</div>
+				</p>
+
+				<p>
+					My group presented this at UD's annual design showcase, where all seniors present their senior
+					design projects. We created a frame that was representative of the truss rod that the
+					robot would have to travel along during normal operation, and we also were able to bring it to a
+					farm site on campus and put it on to run it. In the end, this design ended up proving
+					to be a great validation of the idea, and a partner and I were offered by Dr. Bao to work on this
+					project again in the coming semester to make some general improvements based on
+					these initial results.
+				<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+					<video height="350" controls style="border-radius: 5px" autoplay muted>
+						<source src="images/rivulet-frame-test.mp4">
+					</video>
+				</div>
+				</p>
+
+
+				<div style="display: flex; justify-content: center; align-items: center; height: 25vh;">
+					<h1>RIVULET V2</h1>
+				</div>
 
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		</div>
 
-	</body>
+		<!-- Final Back Button -->
+		<header id="header">
+			<div class="inner">
+				<a href="index.html" class="logo">
+					<span class="icon solid style1 fa-arrow-left" style="margin-right: 10px"></span><span
+						class="title">Back to
+						home</span>
+				</a>
+			</div>
+		</header>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<section>
+					<h1>Get in touch!</h1>
+
+					<div style="display: flex; align-items: center; margin-bottom: 20px; width: 100%;">
+						<a href="tel:+14439877745" class="icon solid style2 fa-phone" style="margin-right: 20px;"><span
+								class="label">Phone</span></a>
+						<h4 style="margin: 0;">(443) 987-7745</h4>
+					</div>
+
+					<div style="display: flex; align-items: center; margin-bottom: 20px; width: 100%;">
+						<a href="mailto:bencaro@udel.edu" class="icon solid style2 fa-envelope"
+							style="margin-right: 20px;"><span class="label">Email</span></a>
+						<h4 style="margin: 0;">bencaro@udel.edu</h4>
+					</div>
+
+					<p>Currently in Bel Air, Maryland. Open to relocation along the east coast.</p>
+
+
+				</section>
+				<section>
+					<h1>Find me!</h1>
+					<ul class="icons">
+						<li><a href="https://github.com/bcaro57" target="_blank"
+								class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.linkedin.com/in/ben-caro/" target="_blank"
+								class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					</ul>
+				</section>
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
