@@ -26,8 +26,8 @@
 
 				<!-- Logo -->
 				<a href="index.html" class="logo">
-					<span class="icon solid style1 fa-arrow-left" style="margin-right: 10px"></span><span
-						class="title">Back to home</span>
+					<span class="icon solid style1 fa-arrow-left" style="margin-right: 10px"></span><span class="title">Back to
+						home</span>
 				</a>
 
 				<!-- Nav -->
@@ -126,7 +126,7 @@
 					would introduce a lot of unnecessary lag into the system,
 					I tested the communication method between the two using push buttons on a controller and LEDs on a
 					receiver.
-				<div style="display: flex; justify-content: center; align-items: center; height: 65vh;">
+				<div style="display: flex; justify-content: center; align-items: center; height: 50vh;">
 					<video height="450" controls style="border-radius: 5px" autoplay muted>
 						<source src="images/rivulet-led-example.mp4">
 					</video>
@@ -151,8 +151,8 @@
 					more tidy and concise, with mounts to fit them into the frame of our robot.
 					At this time, I also helped the other members of my team by laser cutting the arms and any other
 					spacers out that we needed in the UD FabLab.
-				<div style="display: flex; justify-content: center; align-items: center; height: 55vh;">
-					<span class="image center"><img src="images/rivulet-driver-board.JPG" height="350" alt="" /></span>
+				<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+					<span class="image center"><img src="images/rivulet-driver-board.JPG" height="400" alt="" /></span>
 				</div>
 				</p>
 
@@ -161,7 +161,7 @@
 					of the electronics. With some final testing and adding the dynamic balancer, I
 					was able to create an initial setup routine and specialized moves for each arm to raise and lower,
 					while placing the balance weight accordingly. The video below shows this process at 2.5x speed.
-				<div style="display: flex; justify-content: center; align-items: center; height: 55vh;">
+				<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
 					<video height="350" controls style="border-radius: 5px" autoplay muted>
 						<source src="images/rivulet-full-bench-test.mp4">
 					</video>
@@ -176,7 +176,7 @@
 					to be a great validation of the idea, and a partner and I were offered by Dr. Bao to work on this
 					project again in the coming semester to make some general improvements based on
 					these initial results.
-				<div style="display: flex; justify-content: center; align-items: center; height: 55vh;">
+				<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
 					<video height="350" controls style="border-radius: 5px" autoplay muted>
 						<source src="images/rivulet-frame-test.mp4">
 					</video>
@@ -184,9 +184,45 @@
 				</p>
 
 
-				<div style="display: flex; justify-content: center; align-items: center; height: 25vh;">
+				<div style="display: flex; justify-content: center; align-items: center; height: 15vh;">
 					<h1>RIVULET V2</h1>
 				</div>
+
+				<p>
+					During the next semester, my teammate and I decided that it would be best to restart the robot
+					from scratch, taking the lessons learned and the new understanding of both the scope and the 
+					problem to make better informed decisions for the design. The major design constraints revolved
+					around reducing the total weight of the robot, which meant finding a different method for 
+					self-stabilization, changing the type of battery power, and reducing the size all while 
+					introducing a sleek new look.
+				</p>
+
+				<p> 
+					In order to start, we needed to think about what worked well and what didn't. One major feature 
+					that we intentionally thought of for the previous version was using V-groove wheels; this would 
+					allow the robot to dynamically compensate for the rod if the placement was off, simply sliding
+					back into place. We wanted to keep that same design, but try to optimize the size of the wheel,
+					meaning we we're going to have to create something custom. The approach that we decided on was
+					creating a 3D model of the wheel, casting a negative mold in silicone, and then creating a final
+					positive mold of the wheel with a central machined hub being trapped inside of the new wheel. 
+					This is to ensure that the drive shaft can have a metal interface to interact with rather than
+					some resin. I equate this to the idea of "borrowing tolerances" that is commonly referred to
+					in the 3D printing community.
+				</p>
+
+				<p>
+					Another feature that we knew didn't work well in our new design was the counterweight system.
+					To combat this problem, we created a new arm model that had an "up-stop wheel". This wheel 
+					supports the robot from the underneath, and it is actuated via a timing belt with custom
+					3d printed timing pulleys. With that, we can precisely control the amount of relative 
+					rotation that the up-stop wheel should have in comparison to the drive wheel. This wheel
+					will similarly have an insert into its core, but this will be a stock part that can be
+					press fit in rather than trapping the hardware inside the resin.
+				</p>
+
+				<p>
+					
+				</p>
 
 			</div>
 
