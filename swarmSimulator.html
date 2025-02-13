@@ -48,7 +48,7 @@
 					<div id="main">
 						<div class="inner">
 							<h1>Swarm Simulator</h1>
-							
+
 							<p><span class="image left"><img src="images/swarm sim cover.jpg" alt="" /></span>
 								In Fall 2024, my first year of the 4+1 graduate program, I participated in this swarm simulator project
 								as an independent study. The aim of this project was to help two PhD students in the lab by creating a 
@@ -59,8 +59,56 @@
 								run. To train the machine learning models that they have planned, this current setup is inadequate because of
 								the long time that it takes to run; thus, this project was devised to help productivity for these students.
 							</p>
-							<p></p>
-							<p></p>
+							<p>This project uses ROS2 Humble and Gazebo Classic, both of which were somewhat new to me coming into this project.
+								I had previously created a URDF (3d robot description) file, and very trivial simulations in class project for fun.
+								Here, however, I needed to dive deeper to learn about controlling the robots independently in a simulated environment,
+								and developing code that would control allow them to operate within the world coordinate frame. I found the dimensions
+								(in the left picture below) through the producer and used them to create the 3d model (in the right picture below).
+								To do this, I created a URDF file, which is made up of tags similar to HTML. Each robot is made of joints and links,
+								where the joints are connecting two links, and the links describe the visual geometry, collision geometry, and inertial
+								geometry of a given linkage. In this case, each wheel is its own link and the chassis is one link, and each wheel is
+								joined to the chassis. Additional to these robots, I had to create the arena which mimics the mat in the lab. It has some small thickness, and
+								matches the dimensions of its real life counterpart.
+							</p>
+							<div style="display: flex; justify-content: center; align-items: center; height: 55vh;">
+								<span class="image left"><img src="images/turbopi dimensions.png" height="400" alt="" /></span>
+								<span class="image right"><img src="images/turbopi model.png" height="400" alt="" /></span>
+							</div>
+							<p>The next task was to create some control for the robots. The first task that I decided to go with was developing my own controller
+								based on the teleoperation function that already exists in ROS2. Below, you can see one robot in the arena, as well as 
+								the commands in the terminal to pull up the teleoperation function.
+							</p>
+							<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+								<video height="350" controls style="border-radius: 5px" autoplay muted>
+									<source src="images/Independent Study Manual Control Demo.mp4">
+								</video>
+							</div>
+							<p>Now, in order to actually control the robots, the transformation matrices for each robot must be read and used by our
+								program to determine heading and location. In the following video, you're able to see the transformation data change 
+								when I drive the robot around. 
+							</p>
+							<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+								<video height="350" controls style="border-radius: 5px" autoplay muted>
+									<source src="images/Independent Study TF Broadcaster Demo.mp4">
+								</video>
+							</div>
+							<p>Finally, you can see the example below. This uses a PID controller for each robot, which spawns in a random orientation
+								within a small radius, similar to the real life experiment. Each robot has its own predetermined location that it is supposed
+								to travel to within the world frame, spaced 0.5m apart. Although the robot controller could use more tuning, the product undeniably
+								matches with what the real world experiments are capable of doing.
+							</p>
+							<div style="display: flex; justify-content: center; align-items: center; height: 50vh;">
+								<video height="450" controls style="border-radius: 5px" autoplay muted>
+									<source src="images/Independent Study Final Demo.mp4">
+								</video>
+							</div>
+							<p>This project taught me a lot about ROS2 and how to control mobile robots in a simulation environment, as well as how to use
+								transformation matrices from each robot. One very challenging aspect of this project was developing independent control
+								of each robot, which through a lot of trial and error as well as reading documentation and finding useful code online
+								eventually helped solve my problem. This project was very rewarding, and I'm excited to work more and expand my knowledge of
+								ROS2! If you'd like to see the code, you can find it 
+								<a href="https://github.com/HORC-Lab/swarmsim" target="_blank">at this GitHub page</a>.
+							</p>
 						</div>
 					</div>
 
