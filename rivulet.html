@@ -26,7 +26,8 @@
 
 				<!-- Logo -->
 				<a href="index.html" class="logo">
-					<span class="icon solid style1 fa-arrow-left" style="margin-right: 10px"></span><span class="title">Back to
+					<span class="icon solid style1 fa-arrow-left" style="margin-right: 10px"></span><span
+						class="title">Back to
 						home</span>
 				</a>
 
@@ -58,12 +59,12 @@
 					and Vegetation Understanding, Learning, and Environmental Tracking; additionally, the word 'rivulet'
 					is also defined as "a very small stream". This robot, originally devised as a senior design project
 					at UD, is intended to be used by farmers/researchers (specifically Dr. Yin Bao, the sponsor of this
-					project) to monitor soil moisture and keep track of plant phenotype. Compared to a field drone, 
+					project) to monitor soil moisture and keep track of plant phenotype. Compared to a field drone,
 					which in some cases are used to achieve similar results, this robot achieves locomotion
 					by riding along the long trusses of a linear move irrigation system, which connect different
-					sections together. Some advantages of this method are a longer battery life, the ability to 
-					collect higher precision measurements, and eliminating downwash that drones create from their 
-					propellers spinning over crops in the field, which can make image collection impossible due 
+					sections together. Some advantages of this method are a longer battery life, the ability to
+					collect higher precision measurements, and eliminating downwash that drones create from their
+					propellers spinning over crops in the field, which can make image collection impossible due
 					to the crops moving.
 				</p>
 
@@ -187,43 +188,91 @@
 				<div style="display: flex; justify-content: center; align-items: center; height: 15vh;">
 					<h1>RIVULET V2</h1>
 				</div>
-
+				<span class="image right"><img src="images/rivuletv2.PNG" alt="" /></span>
 				<p>
 					During the next semester, my teammate and I decided that it would be best to restart the robot
-					from scratch, taking the lessons learned and the new understanding of both the scope and the 
+					from scratch, taking the lessons learned and the new understanding of both the scope and the
 					problem to make better informed decisions for the design. The major design constraints revolved
-					around reducing the total weight of the robot, which meant finding a different method for 
-					self-stabilization, changing the type of battery power, and reducing the size all while 
-					introducing a sleek new look.
+					around reducing the total weight of the robot (which meant finding a different method for
+					self-stabilization), changing the type of battery power, updating the electronics with custom PCB
+					boards,
+					and reducing the size all while introducing a sleek new look.
 				</p>
 
-				<p> 
-					In order to start, we needed to think about what worked well and what didn't. One major feature 
-					that we intentionally thought of for the previous version was using V-groove wheels; this would 
+				<p>
+					In order to start, we needed to think about what worked well and what didn't. One major feature
+					that we intentionally thought of for the previous version was using V-groove wheels; this would
 					allow the robot to dynamically compensate for the rod if the placement was off, simply sliding
 					back into place. We wanted to keep that same design, but try to optimize the size of the wheel,
 					meaning we we're going to have to create something custom. The approach that we decided on was
 					creating a 3D model of the wheel, casting a negative mold in silicone, and then creating a final
-					positive mold of the wheel with a central machined hub being trapped inside of the new wheel. 
+					positive mold of the wheel with a central machined hub being trapped inside of the new wheel.
 					This is to ensure that the drive shaft can have a metal interface to interact with rather than
-					some resin. I equate this to the idea of "borrowing tolerances" that is commonly referred to
-					in the 3D printing community.
+					some resin and to make the removal process super simple with the silicone negative.
+					Basically, we're using the precise tolerances and strength of the machined hub while
+					decreasing weight and cost, as well as adding the durometer of resin for grip.
 				</p>
-
+				<div style="display: flex; justify-content: center; align-items: center; height: 35vh;">
+					<span class="image left"><img src="images/wheel_casting_housing.jpg" height="300" alt="" /></span>
+					<span class="image right"><img src="images/wheel_casting_spider.jpg" height="300" alt="" /></span>
+				</div>
+				<p>
+					The way in which my partner and I approached this was to create a housing to pour silicone in, as
+					well as a lid with openings to get silicone into the housing and keep the 3D printed wheel from
+					floating out of the silicone. You can see the housing on the left and the "spider" on the right,
+					which click into place. This allows us to leave the silicone/resin to cure overnight while making
+					sure that everything stays where it needs to be. After some research on the web, the best
+					manufacturing method for smoothness was to put the resin into a pressure pot to release any air
+					bubbles from the material. After a few trials to nail down the process, we ended up with 3 custom
+					wheels with trapped inner hubs.
+				</p>
+				<div style="display: flex; justify-content: center; align-items: center; height: 35vh;">
+					<span class="image center"><img src="images/casted_wheel.jpg" height="300" alt="" /></span>
+				</div>
 				<p>
 					Another feature that we knew didn't work well in our new design was the counterweight system.
-					To combat this problem, we created a new arm model that had an "up-stop wheel". This wheel 
+					To combat this problem, we created a new arm model that had an "up-stop wheel". This wheel
 					supports the robot from the underneath, and it is actuated via a timing belt with custom
-					3d printed timing pulleys. With that, we can precisely control the amount of relative 
+					3d printed timing pulleys. With that, we can precisely control the amount of relative
 					rotation that the up-stop wheel should have in comparison to the drive wheel. This wheel
 					will similarly have an insert into its core, but this will be a stock part that can be
 					press fit in rather than trapping the hardware inside the resin.
 				</p>
 
 				<p>
-					
+					I was in charge of developing a PCB for a new controller board, the Adafruit Feather M4 with CAN Bus
+					already incorporated. We shifted to this new controller board for two reasons - for one, the
+					controller is planned on receiving commands from the Nvidia Jetson housed inside and will no longer
+					need the communication via LoRa. Secondly, the new motors that were purchased to drive each of the
+					wheels are all based around CAN, so we wanted an easy interface with that communication layer. This
+					PCB contained a myriad of connectors which were mainly JST connectors for the CAN line to each
+					motor, the linear actuator drivers, and different sensors that we had on board. Additionally, in
+					order to future-proof the system and make it modular, any available pins were broken out and
+					connected to a 5V-3.3V logic level shifter, ensuring that 5V and/or 3.3V sensors may be used in the
+					future. In order to activate the level shifter for any specific node, you could user jumper headers
+					to switch the connection. You can see this circuit board below.
+				</p>
+				<div style="display: flex; justify-content: center; align-items: center; height: 35vh;">
+					<span class="image center"><img src="images/rivulet_circuit_board.jpg" height="300" alt="" /></span>
+				</div>
+				<p>
+					Finally, we wanted the battery system to be quickly and easily swappable. Although we could have
+					went with integrated batteries, one critical constraint was long run times. Instead of stacking
+					loads of batteries into the system and having to develop battery charging systems into the robot,
+					we decided to go with DeWalt batteries - if you have extra batteries, you can instead swap them
+					just as you would with a tool when the battery runs out.
 				</p>
 
+				<p>
+					All of these improvements lead us to the final product, the Rivulet V2. We used a 2020 aluminum 
+					chassis, held together by custom HDPE plates to ensure a rigid but lightweight structure. Everything
+					was easily mounted using the aluminum extrusions. An ABS varnish covers the outside, ensuring that the
+					internal components are protected from sunlight and light amounts of water and debris, as well as 
+					giving it a clean look. Many folded sheet metal and Nylon 6 3D printed brackets were made to hold
+					parts in place. Overall, this project was very satisfying to work on and helped me gain a lot of
+					experience with all sorts of things, like programming, electronics, PCB design, resin manufacturing, 
+					and further honing my 3D printing skills.
+				</p>
 			</div>
 
 		</div>
